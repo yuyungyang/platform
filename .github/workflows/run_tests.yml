@@ -12,7 +12,10 @@ jobs:
     outputs:
       status: ${{ job.status }}
     steps:
-      - uses: yuyungyang/platform@master
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: Run a one-line script
         run: echo Hello, world!
 
